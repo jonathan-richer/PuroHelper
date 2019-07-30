@@ -25,7 +25,7 @@ const btnCreate = document.getElementById("ctl00_CPPC_btnCreate");
 
 const newBtn = document.createElement("button");
 newBtn.innerText = "Sélectionner le lot d'aujourd'hui";
-newBtn.onclick = e => {
+newBtn.addEventListener("click", e => {
     e.preventDefault();
     selectElt.children[0].removeAttribute("selected");
 
@@ -44,10 +44,10 @@ newBtn.onclick = e => {
         inputName.value = batchName;
         btnCreate.click();
     }
-};
+});
 
-newBtn.style["background"] = "rgb(0, 0, 255)";
-newBtn.style["color"] = "rgb(87, 255, 71)";
+newBtn.style["background"] = "#098A00";
+newBtn.style["color"] = "#EDA600";
 newBtn.style["font-weight"] = "750";
 newBtn.style["font-size"] = "14px";
 
