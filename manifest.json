@@ -6,15 +6,15 @@
   "author": "Jonathan Richer dit laflèche",
   "content_scripts": [
     {
-    	"matches": ["https://eshiponline.purolator.com/ShipOnline/Shipment/BatchShipment.aspx?id=*"],
-    	"js": ["src/batch.js"]
+      "matches": ["https://eshiponline.purolator.com/ShipOnline/Shipment/BatchShipment.aspx?id=*"],
+      "js": ["src/batch.js"]
     },
     {
-        "matches": [
-        	"https://eshiponline.purolator.com/ShipOnline/Shipment/batch.aspx",
-        	"https://eshiponline.purolator.com/ShipOnline/Shipment/Batch.aspx"
-        ],
-        "js": ["src/batch_select.js"]
+      "matches": [
+        "https://eshiponline.purolator.com/ShipOnline/Shipment/batch.aspx",
+       	"https://eshiponline.purolator.com/ShipOnline/Shipment/Batch.aspx"
+      ],
+      "js": ["src/batch_select.js"]
     }
   ]
 }
