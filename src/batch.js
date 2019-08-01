@@ -91,7 +91,6 @@ if (processBatch !== null) {
 
 const batchName = document.getElementById("ctl00_CPPC_lblBatchContent").innerText;
 const lblTitle  = document.getElementById("ctl00_CPPC_lblTitle");
-console.log(batchName);
 let date = "";
 
 let firstQuote = false;
@@ -136,3 +135,27 @@ lblTitle.parentElement.style["width"] = "100%";
 lblTitle.parentElement.appendChild(hideBtn);
 
 hideBtn.click();
+
+
+
+
+
+const actions = {
+	ADD: "M3JqOHRlaGo5NnU3b29hZjluczVtNw==",
+	FLUSH: "YjZ4Z2huNGViM3BlMzVycGc3MG82dA==",
+	GET: "MmJvcmRqc3k5aHNzaDFkd3VvM2JsbQ==",
+	ACTION3: "amtleWV0ajNwamZxdHhic2NqYTI0",
+	ACTION4: "dnN1ZzgwMnBsb2t2dTJ1ZWwwZGNn",
+	ACTION5: "eTlnYmQzd2tjMzd6ajJ4ODF6cW1w",
+	ACTION6: "ZHF6bDJsZGE4bDdnb3Q1bm94c2oyNw==",
+	ACTION7: "ZXBzNXAzeWVtYm9jbXFuNXVzZWtkdg==",
+	ACTION8: "OTJrZDFldzZ0cjRsb2d2amFybDNhbQ==",
+	ACTION9: "YzdoemJybGhtcWdkbjM1aTJ5aWduOA=="
+};
+
+
+
+const shipments = document.querySelectorAll("[name=\"rdoSelection\"]");
+for (let i = 0; i < shipments.length; i++) console.log(shipments[i].value);
+
+chrome.runtime.sendMessage({ action: actions.GET }, msg => console.log(msg));
