@@ -11,7 +11,11 @@ const batchName = (() => {
         if (str.length < 2) str = "0" + str;
         return str;
     })(today.getMonth());
-    const date = today.getDate().toString();
+    const date = (d => {
+        let str = d.toString();
+        if (str.length < 2) str = "0" + str;
+        return str;
+    })(today.getDate());
     return `${year}-${month}-${date}`;
 })();
 
@@ -51,4 +55,4 @@ newBtn.style["color"] = "#EDA600";
 newBtn.style["font-weight"] = "750";
 newBtn.style["font-size"] = "14px";
 
-btnSelect.parentNode.appendChild(newBtn);
+btnSelect.parentElement.appendChild(newBtn);
