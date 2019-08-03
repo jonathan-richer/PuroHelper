@@ -1,3 +1,6 @@
+const DEBUG = false;
+
+
 console.log("Puro helper est en marche ...");
 
 // Acquérir les éléments à modifier.
@@ -8,6 +11,7 @@ const createShipment = document.getElementById("ctl00_CPPC_btnCreate");
 // Bouton « Traiter l'envoi sélectionné »
 
 const processSingle = document.getElementById("ctl00_CPPC_btnProcessSingle");
+const processSingle2 = document.createElement("button");
 
 // Bouton « Traiter le lot »
 
@@ -34,13 +38,20 @@ createShipment.style["color"]       = "#098A00";
 createShipment.style["font-weight"] = "750";
 createShipment.style["font-size"]   = "14px";
 
+document.getElementById("ctl00_CPPC_lblTitle").parentElement.style["text-align"] = "center";
+
 
 if (processSingle !== null) {
-	processSingle.style["float"]       = "left";
-	processSingle.style["background"]  = "#098A00";
-	processSingle.style["color"]       = "#EDA600";
-	processSingle.style["font-weight"] = "750";
-	processSingle.style["font-size"]   = "14px";
+	processSingle2.style["float"]       = "left";
+	processSingle2.style["background"]  = "#098A00";
+	processSingle2.style["color"]       = "#EDA600";
+	processSingle2.style["font-weight"] = "750";
+	processSingle2.style["font-size"]   = "14px";
+	processSingle2.style["padding"]     = "5px 14px";
+	processSingle2.style["border"]      = "none";
+	processSingle2.innerText            = "Traiter l'envoi sélectionné";
+	processSingle.style["display"]      = "none";
+	processSingle.parentElement.appendChild(processSingle2);
 }
 
 
@@ -127,7 +138,7 @@ hideBtn.addEventListener("click", e => {
 });
 hideBtn.innerText           = "Afficher / Cacher";
 hideBtn.style["display"]    = "inline-block";
-hideBtn.style["background"] = "purple";
+hideBtn.style["background"] = "gray";
 hideBtn.style["color"]      = "white";
 hideBtn.style["float"]      = "right";
 
@@ -136,26 +147,3 @@ lblTitle.parentElement.appendChild(hideBtn);
 
 hideBtn.click();
 
-
-
-
-
-const actions = {
-	ADD: "M3JqOHRlaGo5NnU3b29hZjluczVtNw==",
-	FLUSH: "YjZ4Z2huNGViM3BlMzVycGc3MG82dA==",
-	GET: "MmJvcmRqc3k5aHNzaDFkd3VvM2JsbQ==",
-	ACTION3: "amtleWV0ajNwamZxdHhic2NqYTI0",
-	ACTION4: "dnN1ZzgwMnBsb2t2dTJ1ZWwwZGNn",
-	ACTION5: "eTlnYmQzd2tjMzd6ajJ4ODF6cW1w",
-	ACTION6: "ZHF6bDJsZGE4bDdnb3Q1bm94c2oyNw==",
-	ACTION7: "ZXBzNXAzeWVtYm9jbXFuNXVzZWtkdg==",
-	ACTION8: "OTJrZDFldzZ0cjRsb2d2amFybDNhbQ==",
-	ACTION9: "YzdoemJybGhtcWdkbjM1aTJ5aWduOA=="
-};
-
-
-
-const shipments = document.querySelectorAll("[name=\"rdoSelection\"]");
-for (let i = 0; i < shipments.length; i++) console.log(shipments[i].value);
-
-chrome.runtime.sendMessage({ action: actions.GET }, msg => console.log(msg));
