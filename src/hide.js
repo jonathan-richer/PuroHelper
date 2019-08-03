@@ -27,6 +27,11 @@ processSingle2.addEventListener("click", e => {
 	if (!DEBUG) processSingle.click();
 });
 
+const actions = {
+	ADD: "ADD",
+	FLUSH: "FLUSH",
+	GET: "GET"
+};
 
 const uuid = () => btoa(Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
 

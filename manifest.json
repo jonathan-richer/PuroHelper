@@ -18,20 +18,10 @@
         	"https://eshiponline.purolator.com/ShipOnline/Shipment/Batch.aspx"
         ],
         "js": ["src/batch_select.js"]
-    },
-    {
-      "matches": ["https://eshiponline.purolator.com/ShipOnline/Shipment/batchstatus.aspx"],
-      "js": [
-        "src/actions.js",
-        "src/batchstatus.js"
-      ]
     }
   ],
   "background": {
-    "scripts": [
-      "src/actions.js",
-      "src/background.js"
-    ]
+    "scripts": ["src/background.js"]
   },
   "externally_connectable": {
     "matches": ["https://eshiponline.purolator.com/ShipOnline/Shipment/BatchShipment.aspx"]

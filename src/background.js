@@ -1,5 +1,11 @@
 console.log("Starting ...");
 
+const actions = {
+	ADD: "ADD",
+	FLUSH: "FLUSH",
+	GET: "GET"
+};
+
 const updateTreated = e => {
 	if (e) localStorage.setItem("treated", JSON.stringify(e));
 	else return JSON.parse(localStorage.getItem("treated")) || [];
