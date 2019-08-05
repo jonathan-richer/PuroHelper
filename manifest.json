@@ -4,6 +4,7 @@
   "version": "1.3.0",
   "description": "Simplifier l'interface des lots d'expédition dans Purolator pour éviter les erreurs.",
   "author": "Jonathan Richer dit laflèche",
+  "key": "glgpmabmmcphggahbnemnpkjkaboffkh",
   "content_scripts": [
     {
     	"matches": ["https://eshiponline.purolator.com/ShipOnline/Shipment/BatchShipment.aspx?id=*"],
