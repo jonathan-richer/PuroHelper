@@ -42,7 +42,7 @@ let notTreated = [];
 let selected = undefined;
 
 const activeRequests = [];
-const EXTENSIONID = "nhkamclpgligikjodanlmjfdmibnndkc";
+const EXTENSIONID = "glgpmabmmcphggahbnemnpkjkaboffkh";
 let hiddenStatus = true;
 
 for (let i = 0; i < shipments.length; i++) {
